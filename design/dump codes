@@ -1,0 +1,39 @@
+let bill1 = document.querySelector('input#bill')
+let noOfPeople1 = document.querySelector('input#people')
+let tipPercentages = document.querySelectorAll('.cl-tips')
+let custpercentages = document.querySelectorAll('input#custom')
+
+
+let billAmount = 0;
+let noOfPeople = 0;
+let tipPercentage = 0;
+
+bill1.addEventListener('keyup', e =>{
+    billAmount = Number(e.target.value);
+    calculatetip
+})
+
+noOfPeople1.addEventListener('keyup', e =>{
+    noOfPeople1 = Number(e.target.value);
+    calculatetip
+})
+
+Array.from(tipPercentages).forEach(tipPercentage => {
+    tipPercentage.addEventListener('click', e => {
+        if(e.target.innertext.includes('%')){
+            tipPercentage = Number(e.target.innertext.replace('%',''))
+        }
+        else(
+            custpercentages.addEventListener('keyup', e => {
+                tipPercentage = Number(e.target.value)}
+            )
+        )
+    })
+})
+
+function calculatetip(){
+    let tipAmount = billAmount * (tipPercentage/100)
+    let totalAmount = tipAmount + billAmount
+    let amountPerperson = totalAmount/noOfPeople
+
+}
