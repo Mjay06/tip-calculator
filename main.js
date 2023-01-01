@@ -40,7 +40,7 @@ Array.from(tipPercentages).forEach(tipPercentag => {
 })   
 })
 resetbtn.addEventListener('click', e => {
-    document.location = 'http://127.0.0.1:5500/index.html'
+    document.location = 'http://127.0.0.1:5500/tip-calculator-app-main/index.html'
 })
 
 
